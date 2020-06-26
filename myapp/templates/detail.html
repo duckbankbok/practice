@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>더보기</title>
+</head>
+<body>
+    <h1>{{book.visitor}}</h1>
+    <p>{{book.pub_date}}</p>
+    <p>{{book.body}}</p>
+
+    <a href=" {% url 'delete' book.id %}">삭제</a>
+    <a href=" {% url 'update' book.id %}">수정</a>
+    <a href=" {% url 'home' %}">홈으로 </a>
+</body>
+</html>

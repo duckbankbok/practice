@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복영규의 blog</title>
+</head>
+<body>
+    <h1>안녕하세요, 복영규 블로그입니다.</h1>
+    <a href="{%url 'about'%}">더 알아보기</a>
+    <h3>방명록</h3>
+    {% for book in visitors.all %}
+        <h1>{{book.visitor}}</h1>
+        <p>{{book.pub_date}}</p>
+        <p>{{book.summary}} <a href="{%url 'detail' book.id%}">...더보기</a></p>
+    {% endfor %}
+    <a href=" {%url 'new'%}">새로 쓰기</a>
+</body>
+</html>
